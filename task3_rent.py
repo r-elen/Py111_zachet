@@ -1,8 +1,9 @@
 
-ZAYAVKI = [[12, 15], [15, 17], [18, 23], ]
+ZAYAVKI = [[12, 15], [18, 23], [15, 17], [6, 11], ]
 
 
 def rocket(list_zayavok: list) -> bool:
+    list_zayavok.sort()
     end_time = list_zayavok[0][1]
 
     dostup = True
