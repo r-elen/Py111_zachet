@@ -1,7 +1,6 @@
 from typing import List
-from random import randint, choice
+from random import choice, randint
 import random
-import timeit
 import time
 
 
@@ -70,6 +69,7 @@ def merge_sort(container: List[int]) -> List[int]:
 
     return merge_func(left_part, right_part)
 
+
 def quick_sort(container: List[int]) -> List[int]:
     """
     Sort input container with quick sort
@@ -87,20 +87,15 @@ def quick_sort(container: List[int]) -> List[int]:
 
 
 if __name__ == '__main__':
-    # start_time = time.time()
-    # buble_sort(ARRAY)
-    # print('\n', "--- %s seconds ---" % (time.time() - start_time))
-    #
-    # start_time = time.time()
-    # merge_sort(ARRAY)
-    # print('\n', "--- %s seconds ---" % (time.time() - start_time))
-    #
-    # start_time = time.time()
-    # quick_sort(ARRAY)
-    # print('\n', "--- %s seconds ---" % (time.time() - start_time))
+    start_time = time.time()
+    buble_sort(ARRAY)
+    print('\n', "--- %s seconds ---" % (time.time() - start_time))
 
-    timeit.timeit(buble_sort(ARRAY))
+    start_time = time.time()
+    merge_sort(ARRAY)
 
-    # merge_sort(ARRAY)
-    #
-    # quick_sort(ARRAY)
+    print('\n', "--- %s seconds ---" % (time.time() - start_time))
+
+    start_time = time.time()
+    quick_sort(ARRAY)
+    print('\n', "--- %s seconds ---" % (time.time() - start_time))
